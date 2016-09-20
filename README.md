@@ -16,4 +16,13 @@
 你的Git仓库地址就是一个工作区，工作区的隐藏文件夹`.git`是Git的版本库。版本库中存了很多东西，最重要的就是称为 `stage`  或`index`的暂存区，还有Git为我们自动创建的第一个分支`master`，及指向`master`的一个指针叫`HEAD`.<br/>
 `git add` 实际就是把文件修改添加到暂存区；<br/>
 `git commit` 就是把暂存区中所有内容提交到当前分支；</br>
-Git比其他版本控制系统设计得更优秀的是因为**Git跟踪并管理的是修改，而非文件**
+Git比其他版本控制系统设计得更优秀的是因为**Git跟踪并管理的是修改，而非文件**。
+
+## 远程仓库
+1. 创建SSH key:
+先看用户主目录下是否有`.ssh`目录，若无，在git bash中输入`ssh-keygen -t rsa -C"email@xx.com"`。然后复制生成的`id_rsa.pub`中的文本；
+2. 登录GitHub，在Setting中添加 ssh key,即1中复制的文本；
+3. 在github中新建一个repo：learn;
+4. 将本地的git库，与远程库关联：`git remote add origin git@github.com:dawndewvalley/learn.git`
+5. 将本地库的所有内容推送给远程库`git push -u origin master`;
+6. 解除本地库与远程库的关联：`git remote rm origin`;
