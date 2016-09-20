@@ -68,6 +68,14 @@ git checkout -b dev origin/dev //这样才建立了工作分支
 ```
 多人合作时，通常 先试图用`git push origin branchName`推送自己的修改，若推送失败表明远程分支比你本地更新，需要使用`git pull`合并。	
 
+
+## Git Config
+`git config --list`可以查看git的配置信息
+git的配置信息可以存放在三个不同的地方：
+1. 对系统中所以用户都普遍适用的配置`/etc/gitconfig` 若使用`git config`加上`--system`选项时，读，写的就是这个文件；
+2. 用户目录下的配置文件只适用于该用户 ，使用`git config`加上`--global`选项，读写的就是这个文件；
+3. 配置仅对当前项目有效。只使用`git config`来设置配置信息，那么读写的是当前项目的git目录中的配置文件，即工作目录中的`.git/config`文件。每一个级别的配置都会覆盖上层的相同配置
+
 ## FAQ
 
 - 在GitHub添加SSH key时 提示 key is already use.<br/>
