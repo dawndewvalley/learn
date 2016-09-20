@@ -59,9 +59,9 @@ git merge --no-ff-m "merge with no-ff" dev
 
 ## 多人协作
 当你从远程仓库克隆时，实际上Git自动把本地的master分支和远程的master分支对应起来了。并且远程仓库的默认名称是 origin. <br/>
-`git remote`查看远程库的信息；
-`git push origin master` 推送主分支
-`git push origin dev` 推送工作分支
+`git remote`查看远程库的信息；<br/>
+`git push origin master` 推送主分支<br/>
+`git push origin dev` 推送工作分支<br/>
 当他人从远程库clone时，默认情况下只能看到本地master分支，而想要在dev分支上开发，就必须创建远程origin的dev分支到本地：
 ```
 git checkout -b dev origin/dev //这样才建立了工作分支
