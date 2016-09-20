@@ -73,6 +73,7 @@ git checkout -b dev origin/dev //这样才建立了工作分支
 - 在GitHub添加SSH key时 提示 key is already use.<br/>
 
 >表明所添加的SSH key已被其他账户使用，解决方法有两种，一是找到账户删除key,而是重新生成key. 重新生成key：在shell中使用命令`ssh-keygen -t rsa -b 4096 -C"email@xx.com"`;
+
 - `git add`文件取消<br/>
 
-> git使用过程中，发现不想提交的文件add进入index后，想回退取消，可以使用命令`git reset HEAD fileName`
+>git使用过程中，发现不想提交的文件add进入index后，想回退取消，可以使用命令`git reset HEAD fileName`
